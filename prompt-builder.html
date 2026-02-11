@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Prompt Builder</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+function generatePrompt() {
+  const strand = document.getElementById("strand").value;
+  const purpose = document.getElementById("purpose").value;
+  document.getElementById("output").innerText =
+    "For " + strand + ", generate a " + purpose +
+    " prompt that strengthens reasoning without writing final answers.";
+}
+</script>
+</head>
+<body class="bg-slate-100 p-10">
+
+<h1 class="text-3xl font-bold mb-6">Ethical Prompt Builder</h1>
+
+<select id="strand" class="border p-2">
+  <option>Criterion A(i)</option>
+  <option>Criterion B(i)</option>
+  <option>Criterion C(i)</option>
+  <option>Criterion D(ii)</option>
+</select>
+
+<select id="purpose" class="border p-2 ml-4">
+  <option>critique</option>
+  <option>challenge</option>
+  <option>simplification</option>
+</select>
+
+<button onclick="generatePrompt()" class="bg-blue-600 text-white px-4 py-2 ml-4">
+Generate
+</button>
+
+<p id="output" class="mt-6 font-semibold"></p>
+
+<a href="index.html" class="text-blue-600 mt-6 inline-block">← Back</a>
+
+</body>
+</html>
 
